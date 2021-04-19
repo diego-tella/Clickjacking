@@ -24,3 +24,9 @@ chmod +x install.sh
 python3 script.py
 ```
 <span style="color:red;">Attention!</span> it is necessary to use python3.
+
+# Simple Exploit
+We have an example of how a Clickjacking attack can be used.
+The attacker checks with the ```<iframe>``` tag if the victim site is vulnerable. If so, it leaves the entire content of the ```<iframe``` tag invisible using CSS. For the exploit to work, the hacker sets exactly in the iframe tag where the victim has to click on the website. It creates a button, making the victim click that button with social engineering, but when clicking, the victim will actually be clicking on a button in website of the ```<iframe>```, potentially doing something malicious.
+
+
