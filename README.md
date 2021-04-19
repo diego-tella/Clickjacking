@@ -27,6 +27,8 @@ python3 script.py
 
 # Simple Exploit
 We have an example of how a Clickjacking attack can be used.
-The attacker checks with the ```<iframe>``` tag if the victim site is vulnerable. If so, it leaves the entire content of the ```<iframe``` tag invisible using CSS. For the exploit to work, the hacker sets exactly in the iframe tag where the victim has to click on the website. It creates a button, making the victim click that button with social engineering, but when clicking, the victim will actually be clicking on a button in website of the ```<iframe>```, potentially doing something malicious.
+The attacker checks with the ```<iframe>``` tag if the victim site is vulnerable. If so, it leaves the entire content of the ```<iframe>``` tag invisible using CSS. For the exploit to work, the hacker sets exactly in the iframe tag where the victim has to click on the website. It creates a button, making the victim click that button with social engineering, but when clicking, the victim will actually be clicking on a button in website of the ```<iframe>```, potentially doing something malicious.
 
-
+# Bypass X-Frame-Options
+The script developed in JavaScript uses a proxy to scrape the target page and return the content without the header. It will only work for GET requests, won't get cookies, can only scrape pages the third party proxies (one ofcors.io, jsonp.afeld.me, cors-anywhere.herokuapp.com) can access (and may leave a copy of the content on one of those sites).<br>
+Official repository: https://github.com/niutech/x-frame-bypass
